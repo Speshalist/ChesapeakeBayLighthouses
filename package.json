@@ -1,1 +1,13 @@
-{"name": "eleventy static site", "version": "1.0.0", "scripts": { "build": "eleventy" }}
+{
+  "name": "chesapeakebaylighthouses",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "csv-parse": "^5.5.6"
+  }
+}
