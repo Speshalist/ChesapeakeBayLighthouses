@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lighthouse Directory</title>
+    <link rel="stylesheet" href="{{ lighthouses.repoBasePath }}assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Lighthouse Directory</h1>
+      <nav>
+        <a href="{{ lighthouses.repoBasePath }}">Map</a>
+        <a href="{{ lighthouses.repoBasePath }}lighthouses/">Directory</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>State</th>
+            <th>Status</th>
+            <th>Year built</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for lh in lighthouses.items %}
+          <tr>
+            <td>
+              <a href="{{ lighthouses.repoBasePath }}lighthouses/{{ lh.id }}/">{{ lh.name }}</a>
+            </td>
+            <td>{{ lh.state or "" }}</td>
+            <td>{{ lh.status }}</td>
+            <td>{{ lh.year_built or "" }}</td>
+            <td>{{ lh.type }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
