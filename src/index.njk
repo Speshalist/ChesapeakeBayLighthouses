@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chesapeake Bay Lighthouses</title>
+
+    <link rel="stylesheet" href="{{ lighthouses.repoBasePath }}assets/css/site.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Chesapeake Bay Lighthouses</h1>
+      <nav>
+        <a href="{{ lighthouses.repoBasePath }}">Map</a>
+        <a href="{{ lighthouses.repoBasePath }}lighthouses/">Directory</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Map</h2>
+
+        <label>
+          Basemap:
+          <select id="basemap">
+            <option value="osm">OpenStreetMap</option>
+            <option value="water">Water-emphasis</option>
+          </select>
+        </label>
+
+        <label>
+          Symbology:
+          <select id="symbology">
+            <option value="status">Status</option>
+            <option value="type">Type</option>
+            <option value="year_built">Year built (binned)</option>
+          </select>
+        </label>
+
+        <p class="note">
+          Destroyed lighthouses are shown by default with distinct styling.
+        </p>
+      </section>
+
+      <section class="map-wrap">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script>
+      window.__REPO_BASE__ = "{{ lighthouses.repoBasePath }}";
+    </script>
+    <script src="{{ lighthouses.repoBasePath }}assets/js/map.js"></script>
+  </body>
+</html>
