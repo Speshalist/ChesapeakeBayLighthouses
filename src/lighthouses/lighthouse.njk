@@ -1,0 +1,52 @@
+---
+pagination:
+  data: lighthouses.items
+  size: 1
+  alias: lh
+permalink: "lighthouses/{{ lh.id }}/index.html"
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ lh.name }}</title>
+    <link rel="stylesheet" href="{{ lighthouses.repoBasePath }}assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>{{ lh.name }}</h1>
+      <nav>
+        <a href="{{ lighthouses.repoBasePath }}">Map</a>
+        <a href="{{ lighthouses.repoBasePath }}lighthouses/">Directory</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <dl class="dl">
+        <dt>State</dt><dd>{{ lh.state or "" }}</dd>
+        <dt>Status</dt><dd>{{ lh.status }}</dd>
+        <dt>Year built</dt><dd>{{ lh.year_built or "" }}</dd>
+        <dt>Type</dt><dd>{{ lh.type }}</dd>
+        <dt>Coordinates</dt>
+        <dd>
+          {% if lh.latitude and lh.longitude %}
+            {{ lh.latitude }}, {{ lh.longitude }}
+          {% else %}
+            (missing)
+          {% endif %}
+        </dd>
+      </dl>
+
+      <p>
+        {% if lh.wikipedia_url %}
+          <a href="{{ lh.wikipedia_url }}" rel="noopener" target="_blank">Wikipedia</a>
+        {% endif %}
+        {% if lh.source_list_url %}
+          {% if lh.wikipedia_url %} · {% endif %}
+          <a href="{{ lh.source_list_url }}" rel="noopener" target="_blank">Source list</a>
+        {% endif %}
+      </p>
+    </main>
+  </body>
+</html>
