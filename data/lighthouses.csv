@@ -1,4 +1,46 @@
-name, location, year_established
-Sandy Point Light, Sandy Point State Park, 1883
-Thomas Point Shoal Light, Chesapeake Bay, 1825
-Screwpile Lighthouse, Point Lookout, 1874
+id,name,state,latitude,longitude,year_built,status,type,wikipedia_url,source_list_url
+baltimore-harbor-light,Baltimore Harbor Light,MD,39.05919,-76.399,1908,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+blakistone-island-light,Blakistone Island Light,MD,38.2074,-76.7449,1851,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+bloody-point-bar-light,Bloody Point Bar Light,MD,38.8338,-76.3917,1882,active,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+bodkin-island-light,Bodkin Island Light,MD,39.134,-76.427,1822,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+cedar-point-light,Cedar Point Light,MD,39.2992,-76.386,1896,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+choptank-river-light,Choptank River Light,MD,38.6555,-76.1855,1871,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+clay-island-light,Clay Island Light,MD,38.234,-75.97,1832,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+cobb-point-bar-light,Cobb Point Bar Light,MD,38.2424,-76.8266,1889,destroyed,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+concord-point-light,Concord Point Light,MD,39.5407,-76.0848,1827,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+cove-point-light,Cove Point Light,MD,38.3863,-76.3817,1828,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+craighill-channel-lower-range-front-light,Craighill Channel Lower Range Front Light,MD,39.1886,-76.3945,1875,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+craighill-channel-lower-range-rear-light,Craighill Channel Lower Range Rear Light,MD,39.2291,-76.3942,1875,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+craighill-channel-upper-range-front-light,Craighill Channel Upper Range Front Light,MD,39.1971,-76.4482,1886,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+craighill-channel-upper-range-rear-light,Craighill Channel Upper Range Rear Light,MD,39.2162,-76.4627,1886,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+fishing-battery-light,Fishing Battery Light,MD,39.495,-76.083,1853,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+fog-point-light,Fog Point Light,MD,38.0299,-76.0417,1827,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+fort-carroll-light,Fort Carroll Light,MD,39.2147,-76.5199,1854,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+fort-washington-light,Fort Washington Light,MD,38.712306,-77.036889,1857,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+great-shoals-light,Great Shoals Light,MD,38.2143,-75.8794,1882,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+greenbury-point-light-first,Greenbury Point Light (First),MD,38.975,-76.455,1848,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+greenbury-point-shoal-light-second,Greenbury Point Shoal Light (Second),MD,38.968,-76.454,1892,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+hawkins-point-light,Hawkins Point Light,MD,39.2079,-76.5326,1868,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+holland-island-bar-light,Holland Island Bar Light,MD,38.0687,-76.0959,1889,destroyed,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+hooper-island-light,Hooper Island Light,MD,38.256,-76.25,1902,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+hooper-strait-light,Hooper Strait Light,MD,38.7875,-76.2192,1879,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+janes-island-light,Janes Island Light,MD,37.9633,-75.9185,1879,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+lazaretto-point-light,Lazaretto Point Light,MD,39.2622,-76.5715,1831,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+leading-point-light,Leading Point Light,MD,39.2137,-76.5518,1868,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+love-point-light,Love Point Light,MD,39.0539,-76.2904,1872,destroyed,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+lower-cedar-point-light,Lower Cedar Point Light,MD,38.34,-76.993,1896,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+maryland-point-light,Maryland Point Light,MD,38.3495,-77.1975,1892,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+mathias-point-light,Mathias Point Light,MD,38.4051,-77.0428,1876,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+piney-point-light,Piney Point Light,MD,38.1355,-76.5297,1836,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+point-lookout-light,Point Lookout Light,MD,38.0387,-76.3221,1830,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+point-no-point-light,Point No Point Light,MD,38.128,-76.29,1905,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+pooles-island-light,Pooles Island Light,MD,39.279,-76.27,1825,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+ragged-point-light,Ragged Point Light,MD,38.1544,-76.6014,1910,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+sandy-point-shoal-light,Sandy Point Shoal Light,MD,39.016,-76.385,1883,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+sharkfin-shoal-light,Sharkfin Shoal Light,MD,38.202,-75.9868,1892,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+sharps-island-light,Sharps Island Light,MD,38.6391,-76.3758,1882,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+solomons-lump-light,Solomons Lump Light,MD,38.04806,-76.01502,1895,active,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+somers-cove-light,Somers Cove Light,MD,37.9665,-75.8775,1867,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+thomas-point-shoal-light,Thomas Point Shoal Light,MD,38.899,-76.436,1875,active,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+turkey-point-light,Turkey Point Light,MD,39.44988278,-76.00842028,1833,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+upper-cedar-point-light,Upper Cedar Point Light,MD,38.4027,-77.0826,1867,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
