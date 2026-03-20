@@ -1,0 +1,1859 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.399,
+          39.05919
+        ]
+      },
+      "properties": {
+        "id": "baltimore-harbor-light",
+        "name": "Baltimore Harbor Light",
+        "state": "MD",
+        "year_built": 1908,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.7449,
+          38.2074
+        ]
+      },
+      "properties": {
+        "id": "blakistone-island-light",
+        "name": "Blakistone Island Light",
+        "state": "MD",
+        "year_built": 1851,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3917,
+          38.8338
+        ]
+      },
+      "properties": {
+        "id": "bloody-point-bar-light",
+        "name": "Bloody Point Bar Light",
+        "state": "MD",
+        "year_built": 1882,
+        "status": "active",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.427,
+          39.134
+        ]
+      },
+      "properties": {
+        "id": "bodkin-island-light",
+        "name": "Bodkin Island Light",
+        "state": "MD",
+        "year_built": 1822,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.386,
+          39.2992
+        ]
+      },
+      "properties": {
+        "id": "cedar-point-light",
+        "name": "Cedar Point Light",
+        "state": "MD",
+        "year_built": 1896,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.1855,
+          38.6555
+        ]
+      },
+      "properties": {
+        "id": "choptank-river-light",
+        "name": "Choptank River Light",
+        "state": "MD",
+        "year_built": 1871,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.97,
+          38.234
+        ]
+      },
+      "properties": {
+        "id": "clay-island-light",
+        "name": "Clay Island Light",
+        "state": "MD",
+        "year_built": 1832,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.8266,
+          38.2424
+        ]
+      },
+      "properties": {
+        "id": "cobb-point-bar-light",
+        "name": "Cobb Point Bar Light",
+        "state": "MD",
+        "year_built": 1889,
+        "status": "destroyed",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.0848,
+          39.5407
+        ]
+      },
+      "properties": {
+        "id": "concord-point-light",
+        "name": "Concord Point Light",
+        "state": "MD",
+        "year_built": 1827,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3817,
+          38.3863
+        ]
+      },
+      "properties": {
+        "id": "cove-point-light",
+        "name": "Cove Point Light",
+        "state": "MD",
+        "year_built": 1828,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3945,
+          39.1886
+        ]
+      },
+      "properties": {
+        "id": "craighill-channel-lower-range-front-light",
+        "name": "Craighill Channel Lower Range Front Light",
+        "state": "MD",
+        "year_built": 1875,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3942,
+          39.2291
+        ]
+      },
+      "properties": {
+        "id": "craighill-channel-lower-range-rear-light",
+        "name": "Craighill Channel Lower Range Rear Light",
+        "state": "MD",
+        "year_built": 1875,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4482,
+          39.1971
+        ]
+      },
+      "properties": {
+        "id": "craighill-channel-upper-range-front-light",
+        "name": "Craighill Channel Upper Range Front Light",
+        "state": "MD",
+        "year_built": 1886,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4627,
+          39.2162
+        ]
+      },
+      "properties": {
+        "id": "craighill-channel-upper-range-rear-light",
+        "name": "Craighill Channel Upper Range Rear Light",
+        "state": "MD",
+        "year_built": 1886,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.083,
+          39.495
+        ]
+      },
+      "properties": {
+        "id": "fishing-battery-light",
+        "name": "Fishing Battery Light",
+        "state": "MD",
+        "year_built": 1853,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.0417,
+          38.0299
+        ]
+      },
+      "properties": {
+        "id": "fog-point-light",
+        "name": "Fog Point Light",
+        "state": "MD",
+        "year_built": 1827,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5199,
+          39.2147
+        ]
+      },
+      "properties": {
+        "id": "fort-carroll-light",
+        "name": "Fort Carroll Light",
+        "state": "MD",
+        "year_built": 1854,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.036889,
+          38.712306
+        ]
+      },
+      "properties": {
+        "id": "fort-washington-light",
+        "name": "Fort Washington Light",
+        "state": "MD",
+        "year_built": 1857,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.8794,
+          38.2143
+        ]
+      },
+      "properties": {
+        "id": "great-shoals-light",
+        "name": "Great Shoals Light",
+        "state": "MD",
+        "year_built": 1882,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.455,
+          38.975
+        ]
+      },
+      "properties": {
+        "id": "greenbury-point-light-first",
+        "name": "Greenbury Point Light (First)",
+        "state": "MD",
+        "year_built": 1848,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.454,
+          38.968
+        ]
+      },
+      "properties": {
+        "id": "greenbury-point-shoal-light-second",
+        "name": "Greenbury Point Shoal Light (Second)",
+        "state": "MD",
+        "year_built": 1892,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5326,
+          39.2079
+        ]
+      },
+      "properties": {
+        "id": "hawkins-point-light",
+        "name": "Hawkins Point Light",
+        "state": "MD",
+        "year_built": 1868,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.0959,
+          38.0687
+        ]
+      },
+      "properties": {
+        "id": "holland-island-bar-light",
+        "name": "Holland Island Bar Light",
+        "state": "MD",
+        "year_built": 1889,
+        "status": "destroyed",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.25,
+          38.256
+        ]
+      },
+      "properties": {
+        "id": "hooper-island-light",
+        "name": "Hooper Island Light",
+        "state": "MD",
+        "year_built": 1902,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2192,
+          38.7875
+        ]
+      },
+      "properties": {
+        "id": "hooper-strait-light",
+        "name": "Hooper Strait Light",
+        "state": "MD",
+        "year_built": 1879,
+        "status": "moved to museum",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.9185,
+          37.9633
+        ]
+      },
+      "properties": {
+        "id": "janes-island-light",
+        "name": "Janes Island Light",
+        "state": "MD",
+        "year_built": 1879,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5715,
+          39.2622
+        ]
+      },
+      "properties": {
+        "id": "lazaretto-point-light",
+        "name": "Lazaretto Point Light",
+        "state": "MD",
+        "year_built": 1831,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5518,
+          39.2137
+        ]
+      },
+      "properties": {
+        "id": "leading-point-light",
+        "name": "Leading Point Light",
+        "state": "MD",
+        "year_built": 1868,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2904,
+          39.0539
+        ]
+      },
+      "properties": {
+        "id": "love-point-light",
+        "name": "Love Point Light",
+        "state": "MD",
+        "year_built": 1872,
+        "status": "destroyed",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.993,
+          38.34
+        ]
+      },
+      "properties": {
+        "id": "lower-cedar-point-light",
+        "name": "Lower Cedar Point Light",
+        "state": "MD",
+        "year_built": 1896,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.1975,
+          38.3495
+        ]
+      },
+      "properties": {
+        "id": "maryland-point-light",
+        "name": "Maryland Point Light",
+        "state": "MD",
+        "year_built": 1892,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0428,
+          38.4051
+        ]
+      },
+      "properties": {
+        "id": "mathias-point-light",
+        "name": "Mathias Point Light",
+        "state": "MD",
+        "year_built": 1876,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5297,
+          38.1355
+        ]
+      },
+      "properties": {
+        "id": "piney-point-light",
+        "name": "Piney Point Light",
+        "state": "MD",
+        "year_built": 1836,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3221,
+          38.0387
+        ]
+      },
+      "properties": {
+        "id": "point-lookout-light",
+        "name": "Point Lookout Light",
+        "state": "MD",
+        "year_built": 1830,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.29,
+          38.128
+        ]
+      },
+      "properties": {
+        "id": "point-no-point-light",
+        "name": "Point No Point Light",
+        "state": "MD",
+        "year_built": 1905,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.27,
+          39.279
+        ]
+      },
+      "properties": {
+        "id": "pooles-island-light",
+        "name": "Pooles Island Light",
+        "state": "MD",
+        "year_built": 1825,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6014,
+          38.1544
+        ]
+      },
+      "properties": {
+        "id": "ragged-point-light",
+        "name": "Ragged Point Light",
+        "state": "MD",
+        "year_built": 1910,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.385,
+          39.016
+        ]
+      },
+      "properties": {
+        "id": "sandy-point-shoal-light",
+        "name": "Sandy Point Shoal Light",
+        "state": "MD",
+        "year_built": 1883,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.9868,
+          38.202
+        ]
+      },
+      "properties": {
+        "id": "sharkfin-shoal-light",
+        "name": "Sharkfin Shoal Light",
+        "state": "MD",
+        "year_built": 1892,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3758,
+          38.6391
+        ]
+      },
+      "properties": {
+        "id": "sharps-island-light",
+        "name": "Sharps Island Light",
+        "state": "MD",
+        "year_built": 1882,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.01502,
+          38.04806
+        ]
+      },
+      "properties": {
+        "id": "solomons-lump-light",
+        "name": "Solomons Lump Light",
+        "state": "MD",
+        "year_built": 1895,
+        "status": "active",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.8775,
+          37.9665
+        ]
+      },
+      "properties": {
+        "id": "somers-cove-light",
+        "name": "Somers Cove Light",
+        "state": "MD",
+        "year_built": 1867,
+        "status": "inactive",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.436,
+          38.899
+        ]
+      },
+      "properties": {
+        "id": "thomas-point-shoal-light",
+        "name": "Thomas Point Shoal Light",
+        "state": "MD",
+        "year_built": 1875,
+        "status": "active",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.00842028,
+          39.44988278
+        ]
+      },
+      "properties": {
+        "id": "turkey-point-light",
+        "name": "Turkey Point Light",
+        "state": "MD",
+        "year_built": 1833,
+        "status": "active",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0826,
+          38.4027
+        ]
+      },
+      "properties": {
+        "id": "upper-cedar-point-light",
+        "name": "Upper Cedar Point Light",
+        "state": "MD",
+        "year_built": 1867,
+        "status": "inactive",
+        "type": "screw-pile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5666,
+          39.5409
+        ]
+      },
+      "properties": {
+        "id": "baker-shoal-range-front-light",
+        "name": "Baker Shoal Range Front Light",
+        "state": "DE",
+        "year_built": 1902,
+        "status": "destroyed",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5699,
+          39.512
+        ]
+      },
+      "properties": {
+        "id": "baker-shoal-range-rear-light",
+        "name": "Baker Shoal Range Rear Light",
+        "state": "DE",
+        "year_built": 1904,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.0806,
+          38.7903
+        ]
+      },
+      "properties": {
+        "id": "cape-henlopen-beacon",
+        "name": "Cape Henlopen Beacon",
+        "state": "DE",
+        "year_built": 1825,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.084,
+          38.778
+        ]
+      },
+      "properties": {
+        "id": "cape-henlopen-light",
+        "name": "Cape Henlopen Light",
+        "state": "DE",
+        "year_built": 1769,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.49,
+          39.762
+        ]
+      },
+      "properties": {
+        "id": "cherry-island-range-rear-light",
+        "name": "Cherry Island Range Rear Light",
+        "state": "DE",
+        "year_built": 1880,
+        "status": "destroyed",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1003,
+          38.7972
+        ]
+      },
+      "properties": {
+        "id": "delaware-breakwater-east-end-light",
+        "name": "Delaware Breakwater East End Light",
+        "state": "DE",
+        "year_built": 1885,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1081,
+          38.7992
+        ]
+      },
+      "properties": {
+        "id": "delaware-breakwater-range-front-light",
+        "name": "Delaware Breakwater Range Front Light",
+        "state": "DE",
+        "year_built": 1838,
+        "status": "destroyed",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1694,
+          38.7897
+        ]
+      },
+      "properties": {
+        "id": "delaware-breakwater-range-rear-light",
+        "name": "Delaware Breakwater Range Rear Light",
+        "state": "DE",
+        "year_built": 1881,
+        "status": "inactive",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.055,
+          38.4514
+        ]
+      },
+      "properties": {
+        "id": "fenwick-island-light",
+        "name": "Fenwick Island Light",
+        "state": "DE",
+        "year_built": 1859,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1822,
+          39.0482
+        ]
+      },
+      "properties": {
+        "id": "fourteen-foot-bank-light",
+        "name": "Fourteen Foot Bank Light",
+        "state": "DE",
+        "year_built": 1887,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.0924,
+          38.8145
+        ]
+      },
+      "properties": {
+        "id": "harbor-of-refuge-light",
+        "name": "Harbor of Refuge Light",
+        "state": "DE",
+        "year_built": 1908,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5917,
+          39.4825
+        ]
+      },
+      "properties": {
+        "id": "liston-range-front-light",
+        "name": "Liston Range Front Light",
+        "state": "DE",
+        "year_built": 1906,
+        "status": "inactive",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6397,
+          39.5238
+        ]
+      },
+      "properties": {
+        "id": "liston-range-rear-light",
+        "name": "Liston Range Rear Light",
+        "state": "DE",
+        "year_built": 1906,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.4008,
+          39.185
+        ]
+      },
+      "properties": {
+        "id": "mahon-river-light",
+        "name": "Mahon River Light",
+        "state": "DE",
+        "year_built": 1831,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.3156,
+          38.9475
+        ]
+      },
+      "properties": {
+        "id": "mispillion-light",
+        "name": "Mispillion Light",
+        "state": "DE",
+        "year_built": 1831,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5954,
+          39.6424
+        ]
+      },
+      "properties": {
+        "id": "new-castle-range-front-light",
+        "name": "New Castle Range Front Light",
+        "state": "DE",
+        "year_built": 1876,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.599,
+          39.6482
+        ]
+      },
+      "properties": {
+        "id": "new-castle-range-rear-light",
+        "name": "New Castle Range Rear Light",
+        "state": "DE",
+        "year_built": 1876,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5902,
+          39.4065
+        ]
+      },
+      "properties": {
+        "id": "reedy-island-range-rear-light",
+        "name": "Reedy Island Range Rear Light",
+        "state": "DE",
+        "year_built": 1910,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5179,
+          39.7203
+        ]
+      },
+      "properties": {
+        "id": "bellevue-range-rear-light",
+        "name": "Bellevue Range Rear Light",
+        "state": "DE",
+        "year_built": 1909,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.52,
+          39.722
+        ]
+      },
+      "properties": {
+        "id": "christiana-light",
+        "name": "Christiana Light",
+        "state": "DE",
+        "year_built": 1835,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.516,
+          39.718
+        ]
+      },
+      "properties": {
+        "id": "christiana-north-jetty-light",
+        "name": "Christiana North Jetty Light",
+        "state": "DE",
+        "year_built": 1884,
+        "status": "destroyed",
+        "type": "tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.4754,
+          39.776
+        ]
+      },
+      "properties": {
+        "id": "marcus-hook-range-front-light",
+        "name": "Marcus Hook Range Front Light",
+        "state": "DE",
+        "year_built": 1915,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5032,
+          39.7622
+        ]
+      },
+      "properties": {
+        "id": "marcus-hook-range-rear-light",
+        "name": "Marcus Hook Range Rear Light",
+        "state": "DE",
+        "year_built": 1919,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.3558,
+          37.9111
+        ]
+      },
+      "properties": {
+        "id": "assateague-light",
+        "name": "Assateague Light",
+        "state": "VA",
+        "year_built": 1833,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2698,
+          37.0872
+        ]
+      },
+      "properties": {
+        "id": "back-river-light",
+        "name": "Back River Light",
+        "state": "VA",
+        "year_built": 1829,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.7498,
+          37.4839
+        ]
+      },
+      "properties": {
+        "id": "bells-rock-light",
+        "name": "Bells Rock Light",
+        "state": "VA",
+        "year_built": 1881,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.7327,
+          37.8245
+        ]
+      },
+      "properties": {
+        "id": "bowlers-rock-light",
+        "name": "Bowlers Rock Light",
+        "state": "VA",
+        "year_built": 1868,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.9063,
+          37.1229
+        ]
+      },
+      "properties": {
+        "id": "cape-charles-light",
+        "name": "Cape Charles Light",
+        "state": "VA",
+        "year_built": 1828,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.0072,
+          36.9264
+        ]
+      },
+      "properties": {
+        "id": "cape-henry-light",
+        "name": "Cape Henry Light",
+        "state": "VA",
+        "year_built": 1881,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.0324,
+          37.2564
+        ]
+      },
+      "properties": {
+        "id": "cherrystone-bar-light",
+        "name": "Cherrystone Bar Light",
+        "state": "VA",
+        "year_built": 1858,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.71278,
+          36.90472
+        ]
+      },
+      "properties": {
+        "id": "chesapeake-light",
+        "name": "Chesapeake Light",
+        "state": "VA",
+        "year_built": 1965,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.337,
+          36.892
+        ]
+      },
+      "properties": {
+        "id": "craney-island-light",
+        "name": "Craney Island Light",
+        "state": "VA",
+        "year_built": 1859,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6368,
+          37.1365167
+        ]
+      },
+      "properties": {
+        "id": "deepwater-shoals-light",
+        "name": "Deepwater Shoals Light",
+        "state": "VA",
+        "year_built": 1855,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.35944,
+          37.37639
+        ]
+      },
+      "properties": {
+        "id": "dutch-gap-canal-lights",
+        "name": "Dutch Gap Canal Lights",
+        "state": "VA",
+        "year_built": 1875,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2675,
+          37.8042
+        ]
+      },
+      "properties": {
+        "id": "great-wicomico-river-light",
+        "name": "Great Wicomico River Light",
+        "state": "VA",
+        "year_built": 1889,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.701,
+          37.394
+        ]
+      },
+      "properties": {
+        "id": "hog-island-light",
+        "name": "Hog Island Light",
+        "state": "VA",
+        "year_built": 1896,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.040639,
+          38.790389
+        ]
+      },
+      "properties": {
+        "id": "jones-point-light",
+        "name": "Jones Point Light",
+        "state": "VA",
+        "year_built": 1856,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.223,
+          37.313
+        ]
+      },
+      "properties": {
+        "id": "jordan-point-range-rear-light",
+        "name": "Jordan Point Range Rear Light",
+        "state": "VA",
+        "year_built": 1855,
+        "status": "active",
+        "type": "range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.38,
+          37.934
+        ]
+      },
+      "properties": {
+        "id": "killock-shoal-light",
+        "name": "Killock Shoal Light",
+        "state": "VA",
+        "year_built": 1886,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.331,
+          36.875
+        ]
+      },
+      "properties": {
+        "id": "lambert-point-light",
+        "name": "Lambert Point Light",
+        "state": "VA",
+        "year_built": 1872,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.445,
+          36.912
+        ]
+      },
+      "properties": {
+        "id": "nansemond-river-light",
+        "name": "Nansemond River Light",
+        "state": "VA",
+        "year_built": 1878,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.445,
+          36.912
+        ]
+      },
+      "properties": {
+        "id": "new-point-comfort-light",
+        "name": "New Point Comfort Light",
+        "state": "VA",
+        "year_built": 1805,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3915,
+          36.9452
+        ]
+      },
+      "properties": {
+        "id": "newport-news-middle-ground-light",
+        "name": "Newport News Middle Ground Light",
+        "state": "VA",
+        "year_built": 1891,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.0469,
+          37.2288
+        ]
+      },
+      "properties": {
+        "id": "old-plantation-flats-light",
+        "name": "Old Plantation Flats Light",
+        "state": "VA",
+        "year_built": 1886,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3064,
+          37.0018
+        ]
+      },
+      "properties": {
+        "id": "old-point-comfort-light",
+        "name": "Old Point Comfort Light",
+        "state": "VA",
+        "year_built": 1804,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5866,
+          37.3109
+        ]
+      },
+      "properties": {
+        "id": "pages-rock-light",
+        "name": "Pages Rock Light",
+        "state": "VA",
+        "year_built": 1893,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.653,
+          37.0683
+        ]
+      },
+      "properties": {
+        "id": "point-of-shoals-light",
+        "name": "Point of Shoals Light",
+        "state": "VA",
+        "year_built": 1855,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.898,
+          37.663
+        ]
+      },
+      "properties": {
+        "id": "pungoteague-creek-light",
+        "name": "Pungoteague Creek Light",
+        "state": "VA",
+        "year_built": 1854,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.1839,
+          37.88
+        ]
+      },
+      "properties": {
+        "id": "smith-point-light",
+        "name": "Smith Point Light",
+        "state": "VA",
+        "year_built": 1802,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.27,
+          37.5613
+        ]
+      },
+      "properties": {
+        "id": "stingray-point-light",
+        "name": "Stingray Point Light",
+        "state": "VA",
+        "year_built": 1858,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.974,
+          37.7878
+        ]
+      },
+      "properties": {
+        "id": "tangier-sound-light",
+        "name": "Tangier Sound Light",
+        "state": "VA",
+        "year_built": 1890,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2399,
+          37.0146
+        ]
+      },
+      "properties": {
+        "id": "thimble-shoal-light",
+        "name": "Thimble Shoal Light",
+        "state": "VA",
+        "year_built": 1872,
+        "status": "active",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3859,
+          37.2356
+        ]
+      },
+      "properties": {
+        "id": "tue-marshes-light",
+        "name": "Tue Marshes Light",
+        "state": "VA",
+        "year_built": 1875,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.894,
+          37.782
+        ]
+      },
+      "properties": {
+        "id": "watts-island-light",
+        "name": "Watts Island Light",
+        "state": "VA",
+        "year_built": 1833,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5275,
+          37.0218
+        ]
+      },
+      "properties": {
+        "id": "white-shoal-light",
+        "name": "White Shoal Light",
+        "state": "VA",
+        "year_built": 1855,
+        "status": "destroyed",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2359,
+          37.5968
+        ]
+      },
+      "properties": {
+        "id": "windmill-point-light",
+        "name": "Windmill Point Light",
+        "state": "VA",
+        "year_built": 1869,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2359,
+          37.5968
+        ]
+      },
+      "properties": {
+        "id": "wolf-trap-light",
+        "name": "Wolf Trap Light",
+        "state": "VA",
+        "year_built": 1870,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2542,
+          37.2096
+        ]
+      },
+      "properties": {
+        "id": "york-spit-light",
+        "name": "York Spit Light",
+        "state": "VA",
+        "year_built": 1870,
+        "status": "inactive",
+        "type": "unknown"
+      }
+    }
+  ]
+}

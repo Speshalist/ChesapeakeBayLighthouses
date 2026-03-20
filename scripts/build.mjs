@@ -76,6 +76,20 @@ function inferStatusFromDeRow(v) {
   return "unknown";
 }
 
+function inferStateFromSourceFile(sourceFile) {
+  const file = path.basename(String(sourceFile ?? ""));
+  const m = file.match(/^([A-Za-z]{2})lighthouses\.csv$/i);
+  return m ? m[1].toUpperCase() : null;
+}
+
+function sourceListUrlForState(state) {
+  const byState = {
+    DE: "https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware",
+    VA: "https://en.wikipedia.org/wiki/List_of_lighthouses_in_Virginia",
+  };
+  return byState[state] ?? null;
+}
+
 function normalizeRow(r) {
   // Standard schema
   if (nonEmpty(r.name) || nonEmpty(r.id)) {
@@ -100,19 +114,19 @@ function normalizeRow(r) {
       ?.replace(/\s*\([^)]*\)\s*$/g, "")
       .replace(/\s+/g, " ");
     const { latitude, longitude } = parseCoordinates(r.Coordinates);
+    const state = inferStateFromSourceFile(r.__source_file) ?? "unknown";
 
     return {
       id: slugify(normalizedName),
       name: normalizedName,
-      state: "DE",
+      state,
       latitude,
       longitude,
       year_built: firstYear(r["Year first lit"]),
       status: inferStatusFromDeRow(r["Year deactivated"]),
       type: inferType(normalizedName),
       wikipedia_url: null,
-      source_list_url:
-        "https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware",
+      source_list_url: sourceListUrlForState(state),
     };
   }
 
@@ -140,13 +154,17 @@ async function main() {
   for (const csvFile of csvFiles) {
     const csvPath = path.join(dataDir, csvFile);
     const csvRaw = await fs.readFile(csvPath, "utf8");
-    rows.push(
-      ...parse(csvRaw, {
+    const parsedRows = parse(csvRaw, {
         columns: true,
         skip_empty_lines: true,
         trim: true,
-      })
-    );
+      });
+
+    for (const row of parsedRows) {
+      row.__source_file = csvFile;
+    }
+
+    rows.push(...parsedRows);
   }
 
   const parsedItems = rows.map(normalizeRow).filter(Boolean);
