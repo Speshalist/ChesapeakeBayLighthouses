@@ -54,6 +54,36 @@ body {
   padding: 16px;
 }
 
+.directory-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.directory-toolbar label {
+  font-weight: 600;
+}
+
+.directory-toolbar select,
+.sort-dir {
+  border: 1px solid #c8d0d8;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: #fff;
+  font: inherit;
+}
+
+.sort-dir {
+  cursor: pointer;
+}
+
+.sort-dir[aria-pressed="true"] {
+  background: #e8f2ff;
+  border-color: #8cb7e8;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -66,6 +96,24 @@ body {
   text-align: left;
 }
 
+.table th[data-sort-key] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.table th.is-active-sort {
+  color: #0a4a86;
+}
+
+.table th.is-active-sort::after {
+  content: "  \25BC";
+  font-size: 0.75rem;
+}
+
+.table th[data-sort-key][aria-sort="ascending"]::after {
+  content: "  \25B2";
+}
+
 .dl {
   display: grid;
   grid-template-columns: 140px 1fr;
@@ -75,6 +123,55 @@ body {
 .note {
   color: #555;
   font-size: 0.9rem;
+}
+
+.control-group {
+  border: 0;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.control-group legend {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.segmented-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.segment-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.segment-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.segment-option span {
+  display: inline-block;
+  border: 1px solid #c8d0d8;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+.segment-option input:checked + span {
+  background: #e8f2ff;
+  border-color: #8cb7e8;
+  color: #0a4a86;
+  font-weight: 600;
+}
+
+.segment-option input:focus-visible + span {
+  outline: 2px solid #4c92dd;
+  outline-offset: 1px;
 }
 
 .legend {
@@ -114,6 +211,12 @@ body {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
+.legend-swatch-diamond {
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: var(--diamond-color, currentColor);
+}
+
 @media (max-width: 700px) {
   .site-header {
     flex-wrap: wrap;
@@ -125,6 +228,14 @@ body {
 
   .panel {
     width: min(92vw, 340px);
+  }
+
+  .directory-toolbar {
+    gap: 8px;
+  }
+
+  .directory-toolbar select {
+    min-width: 180px;
   }
 }
 
@@ -145,4 +256,15 @@ body {
   background: transparent;
   border: 3px solid;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.lh-marker .diamond {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: var(--diamond-color, currentColor);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }

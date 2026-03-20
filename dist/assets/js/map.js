@@ -192,8 +192,7 @@ async function loadGeojson() {
   if (bounds.isValid()) map.fitBounds(bounds.pad(0.12));
 }
 
-document.getElementById("basemap")?.addEventListener("change", (e) => {
-  const v = e.target.value;
+function applyBasemap(v) {
   if (v === "water") {
     map.removeLayer(osm);
     water.addTo(map);
@@ -201,13 +200,34 @@ document.getElementById("basemap")?.addEventListener("change", (e) => {
     map.removeLayer(water);
     osm.addTo(map);
   }
+}
+
+function applySymbology(v) {
+  currentMode = v;
+  renderLegend();
+  return loadGeojson();
+}
+
+// Backward compatibility: keep working if selects are rendered.
+document.getElementById("basemap")?.addEventListener("change", (e) => {
+  applyBasemap(e.target.value);
 });
 
 document.getElementById("symbology")?.addEventListener("change", async (e) => {
-  currentMode = e.target.value;
-  renderLegend();
-  await loadGeojson();
+  await applySymbology(e.target.value);
 });
+
+for (const input of document.querySelectorAll('input[name="basemap"]')) {
+  input.addEventListener("change", (e) => {
+    if (e.target.checked) applyBasemap(e.target.value);
+  });
+}
+
+for (const input of document.querySelectorAll('input[name="symbology"]')) {
+  input.addEventListener("change", async (e) => {
+    if (e.target.checked) await applySymbology(e.target.value);
+  });
+}
 
 renderLegend();
 loadGeojson().catch((err) => {

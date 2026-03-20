@@ -26,22 +26,37 @@
       <section class="panel">
         <h2>Map</h2>
 
-        <label>
-          Basemap:
-          <select id="basemap">
-            <option value="osm">OpenStreetMap</option>
-            <option value="water">Water-emphasis</option>
-          </select>
-        </label>
+        <fieldset class="control-group" id="basemap-controls">
+          <legend>Basemap</legend>
+          <div class="segmented-control" role="radiogroup" aria-label="Choose basemap">
+            <label class="segment-option">
+              <input type="radio" name="basemap" value="osm" checked />
+              <span>Street</span>
+            </label>
+            <label class="segment-option">
+              <input type="radio" name="basemap" value="water" />
+              <span>Water Focus</span>
+            </label>
+          </div>
+        </fieldset>
 
-        <label>
-          Symbology:
-          <select id="symbology">
-            <option value="status">Status</option>
-            <option value="type">Type</option>
-            <option value="year_built">Year built (binned)</option>
-          </select>
-        </label>
+        <fieldset class="control-group" id="symbology-controls">
+          <legend>Color by</legend>
+          <div class="segmented-control" role="radiogroup" aria-label="Choose map symbology">
+            <label class="segment-option">
+              <input type="radio" name="symbology" value="status" checked />
+              <span>Status</span>
+            </label>
+            <label class="segment-option">
+              <input type="radio" name="symbology" value="type" />
+              <span>Type</span>
+            </label>
+            <label class="segment-option">
+              <input type="radio" name="symbology" value="year_built" />
+              <span>Year Built</span>
+            </label>
+          </div>
+        </fieldset>
 
         <p class="note">
           Destroyed lighthouses are shown by default with distinct styling.

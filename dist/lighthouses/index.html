@@ -16,1060 +16,1157 @@
     </header>
 
     <main class="content">
+      <section class="directory-toolbar" aria-label="Sort lighthouses">
+        <label for="sort-by">Sort by</label>
+        <select id="sort-by">
+          <option value="name">Name</option>
+          <option value="state">State</option>
+          <option value="status">Status</option>
+          <option value="year_built">Year built</option>
+          <option value="type">Type</option>
+        </select>
+
+        <button id="sort-dir" type="button" class="sort-dir" aria-pressed="false">
+          Ascending
+        </button>
+      </section>
+
       <table class="table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>State</th>
-            <th>Status</th>
-            <th>Year built</th>
-            <th>Type</th>
+            <th scope="col" data-sort-key="name">Name</th>
+            <th scope="col" data-sort-key="state">State</th>
+            <th scope="col" data-sort-key="status">Status</th>
+            <th scope="col" data-sort-key="year_built">Year built</th>
+            <th scope="col" data-sort-key="type">Type</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="directory-rows">
           
           <tr>
-            <td>
+            <td data-sort-value="baltimore harbor light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/baltimore-harbor-light/">Baltimore Harbor Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1908</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1908">1908</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="blakistone island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/blakistone-island-light/">Blakistone Island Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1851</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1851">1851</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="bloody point bar light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/bloody-point-bar-light/">Bloody Point Bar Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1882</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1882">1882</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="bodkin island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/bodkin-island-light/">Bodkin Island Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1822</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1822">1822</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cedar point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cedar-point-light/">Cedar Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1896</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1896">1896</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="choptank river light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/choptank-river-light/">Choptank River Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1871</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1871">1871</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="clay island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/clay-island-light/">Clay Island Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1832</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1832">1832</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cobb point bar light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cobb-point-bar-light/">Cobb Point Bar Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1889</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1889">1889</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="concord point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/concord-point-light/">Concord Point Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1827</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1827">1827</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cove point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cove-point-light/">Cove Point Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1828</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1828">1828</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="craighill channel lower range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/craighill-channel-lower-range-front-light/">Craighill Channel Lower Range Front Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1875</td>
-            <td>range</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1875">1875</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="craighill channel lower range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/craighill-channel-lower-range-rear-light/">Craighill Channel Lower Range Rear Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1875</td>
-            <td>range</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1875">1875</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="craighill channel upper range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/craighill-channel-upper-range-front-light/">Craighill Channel Upper Range Front Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1886</td>
-            <td>range</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1886">1886</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="craighill channel upper range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/craighill-channel-upper-range-rear-light/">Craighill Channel Upper Range Rear Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1886</td>
-            <td>range</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1886">1886</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="fishing battery light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/fishing-battery-light/">Fishing Battery Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1853</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1853">1853</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="fog point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/fog-point-light/">Fog Point Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1827</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1827">1827</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="fort carroll light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/fort-carroll-light/">Fort Carroll Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1854</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1854">1854</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="fort washington light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/fort-washington-light/">Fort Washington Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1857</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1857">1857</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="great shoals light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/great-shoals-light/">Great Shoals Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1882</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1882">1882</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="greenbury point light (first)">
               <a href="/ChesapeakeBayLighthouses/lighthouses/greenbury-point-light-first/">Greenbury Point Light (First)</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1848</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1848">1848</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="greenbury point shoal light (second)">
               <a href="/ChesapeakeBayLighthouses/lighthouses/greenbury-point-shoal-light-second/">Greenbury Point Shoal Light (Second)</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1892</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1892">1892</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="hawkins point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/hawkins-point-light/">Hawkins Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1868</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1868">1868</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="holland island bar light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/holland-island-bar-light/">Holland Island Bar Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1889</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1889">1889</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="hooper island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/hooper-island-light/">Hooper Island Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1902</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1902">1902</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="hooper strait light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/hooper-strait-light/">Hooper Strait Light</a>
             </td>
-            <td>MD</td>
-            <td>moved to museum</td>
-            <td>1879</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="moved to museum">moved to museum</td>
+            <td data-sort-value="1879">1879</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="janes island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/janes-island-light/">Janes Island Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1879</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1879">1879</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="lazaretto point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/lazaretto-point-light/">Lazaretto Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1831</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1831">1831</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="leading point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/leading-point-light/">Leading Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1868</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1868">1868</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="love point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/love-point-light/">Love Point Light</a>
             </td>
-            <td>MD</td>
-            <td>destroyed</td>
-            <td>1872</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1872">1872</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="lower cedar point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/lower-cedar-point-light/">Lower Cedar Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1896</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1896">1896</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="maryland point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/maryland-point-light/">Maryland Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1892</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1892">1892</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="mathias point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/mathias-point-light/">Mathias Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1876</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1876">1876</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="piney point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/piney-point-light/">Piney Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1836</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1836">1836</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="point lookout light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/point-lookout-light/">Point Lookout Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1830</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1830">1830</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="point no point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/point-no-point-light/">Point No Point Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1905</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1905">1905</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="pooles island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/pooles-island-light/">Pooles Island Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1825</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1825">1825</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="ragged point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/ragged-point-light/">Ragged Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1910</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1910">1910</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="sandy point shoal light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/sandy-point-shoal-light/">Sandy Point Shoal Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1883</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1883">1883</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="sharkfin shoal light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/sharkfin-shoal-light/">Sharkfin Shoal Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1892</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1892">1892</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="sharps island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/sharps-island-light/">Sharps Island Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1882</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1882">1882</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="solomons lump light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/solomons-lump-light/">Solomons Lump Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1895</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1895">1895</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="somers cove light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/somers-cove-light/">Somers Cove Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1867</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1867">1867</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="thomas point shoal light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/thomas-point-shoal-light/">Thomas Point Shoal Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1875</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1875">1875</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="turkey point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/turkey-point-light/">Turkey Point Light</a>
             </td>
-            <td>MD</td>
-            <td>active</td>
-            <td>1833</td>
-            <td>tower</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1833">1833</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="upper cedar point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/upper-cedar-point-light/">Upper Cedar Point Light</a>
             </td>
-            <td>MD</td>
-            <td>inactive</td>
-            <td>1867</td>
-            <td>screw-pile</td>
+            <td data-sort-value="md">MD</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1867">1867</td>
+            <td data-sort-value="screw-pile">screw-pile</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="baker shoal range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/baker-shoal-range-front-light/">Baker Shoal Range Front Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1902</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1902">1902</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="baker shoal range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/baker-shoal-range-rear-light/">Baker Shoal Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1904</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1904">1904</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cape henlopen beacon">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cape-henlopen-beacon/">Cape Henlopen Beacon</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1825</td>
-            <td>tower</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1825">1825</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cape henlopen light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cape-henlopen-light/">Cape Henlopen Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1769</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1769">1769</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cherry island range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cherry-island-range-rear-light/">Cherry Island Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1880</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1880">1880</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="delaware breakwater east end light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/delaware-breakwater-east-end-light/">Delaware Breakwater East End Light</a>
             </td>
-            <td>DE</td>
-            <td>inactive</td>
-            <td>1885</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1885">1885</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="delaware breakwater range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/delaware-breakwater-range-front-light/">Delaware Breakwater Range Front Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1838</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1838">1838</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="delaware breakwater range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/delaware-breakwater-range-rear-light/">Delaware Breakwater Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>inactive</td>
-            <td>1881</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1881">1881</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="fenwick island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/fenwick-island-light/">Fenwick Island Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1859</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1859">1859</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="fourteen foot bank light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/fourteen-foot-bank-light/">Fourteen Foot Bank Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1887</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1887">1887</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="harbor of refuge light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/harbor-of-refuge-light/">Harbor of Refuge Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1908</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1908">1908</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="liston range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/liston-range-front-light/">Liston Range Front Light</a>
             </td>
-            <td>DE</td>
-            <td>inactive</td>
-            <td>1906</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1906">1906</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="liston range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/liston-range-rear-light/">Liston Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1906</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1906">1906</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="mahon river light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/mahon-river-light/">Mahon River Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1831</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1831">1831</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="mispillion light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/mispillion-light/">Mispillion Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1831</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1831">1831</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="new castle range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/new-castle-range-front-light/">New Castle Range Front Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1876</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1876">1876</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="new castle range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/new-castle-range-rear-light/">New Castle Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1876</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1876">1876</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="reedy island range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/reedy-island-range-rear-light/">Reedy Island Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1910</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1910">1910</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="bellevue range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/bellevue-range-rear-light/">Bellevue Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1909</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1909">1909</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="christiana light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/christiana-light/">Christiana Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1835</td>
-            <td>unknown</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1835">1835</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="christiana north jetty light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/christiana-north-jetty-light/">Christiana North Jetty Light</a>
             </td>
-            <td>DE</td>
-            <td>destroyed</td>
-            <td>1884</td>
-            <td>tower</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1884">1884</td>
+            <td data-sort-value="tower">tower</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="marcus hook range front light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/marcus-hook-range-front-light/">Marcus Hook Range Front Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1915</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1915">1915</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="marcus hook range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/marcus-hook-range-rear-light/">Marcus Hook Range Rear Light</a>
             </td>
-            <td>DE</td>
-            <td>active</td>
-            <td>1919</td>
-            <td>range</td>
+            <td data-sort-value="de">DE</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1919">1919</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="assateague light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/assateague-light/">Assateague Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1833</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1833">1833</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="back river light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/back-river-light/">Back River Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1829</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1829">1829</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="bells rock light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/bells-rock-light/">Bells Rock Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1881</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1881">1881</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="bowlers rock light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/bowlers-rock-light/">Bowlers Rock Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1868</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1868">1868</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cape charles light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cape-charles-light/">Cape Charles Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1828</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1828">1828</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cape henry light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cape-henry-light/">Cape Henry Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1881</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1881">1881</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="cherrystone bar light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/cherrystone-bar-light/">Cherrystone Bar Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1858</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1858">1858</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="chesapeake light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/chesapeake-light/">Chesapeake Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1965</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1965">1965</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="craney island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/craney-island-light/">Craney Island Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1859</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1859">1859</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="deepwater shoals light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/deepwater-shoals-light/">Deepwater Shoals Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1855</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1855">1855</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="dutch gap canal lights">
               <a href="/ChesapeakeBayLighthouses/lighthouses/dutch-gap-canal-lights/">Dutch Gap Canal Lights</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1875</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1875">1875</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="great wicomico river light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/great-wicomico-river-light/">Great Wicomico River Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1889</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1889">1889</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="hog island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/hog-island-light/">Hog Island Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1896</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1896">1896</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="jones point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/jones-point-light/">Jones Point Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1856</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1856">1856</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="jordan point front range light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/jordan-point-front-range-light/">Jordan Point Front Range Light</a>
             </td>
-            <td>VA</td>
-            <td>unknown</td>
-            <td></td>
-            <td>range</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="unknown">unknown</td>
+            <td data-sort-value=""></td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="jordan point range rear light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/jordan-point-range-rear-light/">Jordan Point Range Rear Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1855</td>
-            <td>range</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1855">1855</td>
+            <td data-sort-value="range">range</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="killock shoal light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/killock-shoal-light/">Killock Shoal Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1886</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1886">1886</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="lambert point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/lambert-point-light/">Lambert Point Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1872</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1872">1872</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="nansemond river light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/nansemond-river-light/">Nansemond River Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1878</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1878">1878</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="new point comfort light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/new-point-comfort-light/">New Point Comfort Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1805</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1805">1805</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="newport news middle ground light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/newport-news-middle-ground-light/">Newport News Middle Ground Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1891</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1891">1891</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="old plantation flats light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/old-plantation-flats-light/">Old Plantation Flats Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1886</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1886">1886</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="old point comfort light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/old-point-comfort-light/">Old Point Comfort Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1804</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1804">1804</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="pages rock light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/pages-rock-light/">Pages Rock Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1893</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1893">1893</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="point of shoals light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/point-of-shoals-light/">Point of Shoals Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1855</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1855">1855</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="pungoteague creek light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/pungoteague-creek-light/">Pungoteague Creek Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1854</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1854">1854</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="smith point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/smith-point-light/">Smith Point Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1802</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1802">1802</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="stingray point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/stingray-point-light/">Stingray Point Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1858</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1858">1858</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="tangier sound light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/tangier-sound-light/">Tangier Sound Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1890</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1890">1890</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="thimble shoal light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/thimble-shoal-light/">Thimble Shoal Light</a>
             </td>
-            <td>VA</td>
-            <td>active</td>
-            <td>1872</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="active">active</td>
+            <td data-sort-value="1872">1872</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="tue marshes light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/tue-marshes-light/">Tue Marshes Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1875</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1875">1875</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="watts island light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/watts-island-light/">Watts Island Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1833</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1833">1833</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="white shoal light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/white-shoal-light/">White Shoal Light</a>
             </td>
-            <td>VA</td>
-            <td>destroyed</td>
-            <td>1855</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="destroyed">destroyed</td>
+            <td data-sort-value="1855">1855</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="windmill point light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/windmill-point-light/">Windmill Point Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1869</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1869">1869</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="wolf trap light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/wolf-trap-light/">Wolf Trap Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1870</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1870">1870</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
           <tr>
-            <td>
+            <td data-sort-value="york spit light">
               <a href="/ChesapeakeBayLighthouses/lighthouses/york-spit-light/">York Spit Light</a>
             </td>
-            <td>VA</td>
-            <td>inactive</td>
-            <td>1870</td>
-            <td>unknown</td>
+            <td data-sort-value="va">VA</td>
+            <td data-sort-value="inactive">inactive</td>
+            <td data-sort-value="1870">1870</td>
+            <td data-sort-value="unknown">unknown</td>
           </tr>
           
         </tbody>
       </table>
     </main>
+
+    <script>
+      (function () {
+        const tbody = document.getElementById("directory-rows");
+        const sortBy = document.getElementById("sort-by");
+        const sortDirButton = document.getElementById("sort-dir");
+        const headers = Array.from(document.querySelectorAll("th[data-sort-key]"));
+        if (!tbody || !sortBy || !sortDirButton || !headers.length) return;
+
+        let ascending = true;
+
+        function columnIndexFromKey(key) {
+          return ["name", "state", "status", "year_built", "type"].indexOf(key);
+        }
+
+        function valueFor(row, colIndex, key) {
+          const cell = row.children[colIndex];
+          const raw = String(cell?.dataset.sortValue ?? cell?.textContent ?? "").trim();
+          if (key === "year_built") {
+            const n = Number(raw);
+            return Number.isFinite(n) ? n : -Infinity;
+          }
+          return raw.toLowerCase();
+        }
+
+        function updateHeaderState(key) {
+          for (const th of headers) {
+            const active = th.dataset.sortKey === key;
+            th.classList.toggle("is-active-sort", active);
+            const dir = ascending ? "ascending" : "descending";
+            th.setAttribute("aria-sort", active ? dir : "none");
+          }
+        }
+
+        function sortRows() {
+          const key = sortBy.value;
+          const colIndex = columnIndexFromKey(key);
+          if (colIndex < 0) return;
+
+          const rows = Array.from(tbody.querySelectorAll("tr"));
+          rows.sort((a, b) => {
+            const av = valueFor(a, colIndex, key);
+            const bv = valueFor(b, colIndex, key);
+            if (typeof av === "number" && typeof bv === "number") {
+              return ascending ? av - bv : bv - av;
+            }
+            return ascending
+              ? String(av).localeCompare(String(bv))
+              : String(bv).localeCompare(String(av));
+          });
+
+          const frag = document.createDocumentFragment();
+          for (const row of rows) frag.appendChild(row);
+          tbody.appendChild(frag);
+
+          sortDirButton.textContent = ascending ? "Ascending" : "Descending";
+          sortDirButton.setAttribute("aria-pressed", String(!ascending));
+          updateHeaderState(key);
+        }
+
+        sortBy.addEventListener("change", sortRows);
+        sortDirButton.addEventListener("click", () => {
+          ascending = !ascending;
+          sortRows();
+        });
+
+        for (const th of headers) {
+          th.addEventListener("click", () => {
+            const key = th.dataset.sortKey;
+            if (!key) return;
+            if (sortBy.value === key) ascending = !ascending;
+            else {
+              sortBy.value = key;
+              ascending = true;
+            }
+            sortRows();
+          });
+        }
+
+        sortRows();
+      })();
+    </script>
   </body>
 </html>

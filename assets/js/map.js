@@ -1,6 +1,10 @@
 const base = window.__REPO_BASE__ || "/";
 
-const map = L.map("map", { preferCanvas: true }).setView([38.9, -76.3], 7);
+const map = L.map("map", { preferCanvas: true, zoomControl: false }).setView(
+  [38.9, -76.3],
+  7
+);
+L.control.zoom({ position: "topright" }).addTo(map);
 
 // Basemaps
 const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -54,6 +58,7 @@ function legendItemsForMode(mode) {
     items: [
       ["Active", colorByStatus("active")],
       ["Inactive", colorByStatus("inactive")],
+      ["Moved to museum", colorByStatus("moved to museum")],
       ["Destroyed", colorByStatus("destroyed")],
       ["Unknown", colorByStatus("unknown")],
     ],
@@ -68,12 +73,18 @@ function renderLegend() {
   const rows = items
     .map(([label, color]) => {
       const isDestroyed = currentMode === "status" && label === "Destroyed";
+      const isMovedToMuseum =
+        currentMode === "status" && label === "Moved to museum";
       const swatchClass = isDestroyed
         ? "legend-swatch legend-swatch-ring"
+        : isMovedToMuseum
+          ? "legend-swatch legend-swatch-diamond"
         : "legend-swatch";
       const style = isDestroyed
         ? `style="border-color:${color}"`
-        : `style="background:${color}"`;
+        : isMovedToMuseum
+          ? `style="background:${color}; --diamond-color:${color}"`
+          : `style="background:${color}"`;
 
       return `<div class="legend-row"><span class="${swatchClass}" ${style}></span><span class="legend-label">${label}</span></div>`;
     })
@@ -93,6 +104,8 @@ function colorByStatus(status) {
       return "#1a7f37";
     case "inactive":
       return "#57606a";
+    case "moved to museum":
+      return "#9a6700";
     case "destroyed":
       return "#cf222e";
     default:
@@ -127,10 +140,14 @@ function markerForFeature(feature, latlng) {
     color = colorByYear(Number(p.year_built));
 
   // Make destroyed look different (ring)
-  const destroyed = (p.status || "").toLowerCase() === "destroyed";
+  const status = (p.status || "").toLowerCase();
+  const destroyed = status === "destroyed";
+  const movedToMuseum = status === "moved to museum";
   const html = destroyed
     ? `<span class="ring" style="border-color:${color}"></span>`
-    : `<span class="dot" style="background:${color}"></span>`;
+    : movedToMuseum
+      ? `<span class="diamond" style="background:${color}; --diamond-color:${color}"></span>`
+      : `<span class="dot" style="background:${color}"></span>`;
 
   const icon = L.divIcon({
     className: "lh-marker",
@@ -175,8 +192,7 @@ async function loadGeojson() {
   if (bounds.isValid()) map.fitBounds(bounds.pad(0.12));
 }
 
-document.getElementById("basemap")?.addEventListener("change", (e) => {
-  const v = e.target.value;
+function applyBasemap(v) {
   if (v === "water") {
     map.removeLayer(osm);
     water.addTo(map);
@@ -184,13 +200,34 @@ document.getElementById("basemap")?.addEventListener("change", (e) => {
     map.removeLayer(water);
     osm.addTo(map);
   }
+}
+
+function applySymbology(v) {
+  currentMode = v;
+  renderLegend();
+  return loadGeojson();
+}
+
+// Backward compatibility: keep working if selects are rendered.
+document.getElementById("basemap")?.addEventListener("change", (e) => {
+  applyBasemap(e.target.value);
 });
 
 document.getElementById("symbology")?.addEventListener("change", async (e) => {
-  currentMode = e.target.value;
-  renderLegend();
-  await loadGeojson();
+  await applySymbology(e.target.value);
 });
+
+for (const input of document.querySelectorAll('input[name="basemap"]')) {
+  input.addEventListener("change", (e) => {
+    if (e.target.checked) applyBasemap(e.target.value);
+  });
+}
+
+for (const input of document.querySelectorAll('input[name="symbology"]')) {
+  input.addEventListener("change", async (e) => {
+    if (e.target.checked) await applySymbology(e.target.value);
+  });
+}
 
 renderLegend();
 loadGeojson().catch((err) => {

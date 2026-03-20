@@ -23,7 +23,7 @@ greenbury-point-shoal-light-second,Greenbury Point Shoal Light (Second),MD,38.96
 hawkins-point-light,Hawkins Point Light,MD,39.2079,-76.5326,1868,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 holland-island-bar-light,Holland Island Bar Light,MD,38.0687,-76.0959,1889,destroyed,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 hooper-island-light,Hooper Island Light,MD,38.256,-76.25,1902,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
-hooper-strait-light,Hooper Strait Light,MD,38.7875,-76.2192,1879,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+hooper-strait-light,Hooper Strait Light,MD,38.7875,-76.2192,1879,moved to museum,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 janes-island-light,Janes Island Light,MD,37.9633,-75.9185,1879,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 lazaretto-point-light,Lazaretto Point Light,MD,39.2622,-76.5715,1831,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 leading-point-light,Leading Point Light,MD,39.2137,-76.5518,1868,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
@@ -44,3 +44,21 @@ somers-cove-light,Somers Cove Light,MD,37.9665,-75.8775,1867,inactive,tower,,htt
 thomas-point-shoal-light,Thomas Point Shoal Light,MD,38.899,-76.436,1875,active,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 turkey-point-light,Turkey Point Light,MD,39.44988278,-76.00842028,1833,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
 upper-cedar-point-light,Upper Cedar Point Light,MD,38.4027,-77.0826,1867,inactive,screw-pile,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Maryland
+baker-shoal-range-front-light,Baker Shoal Range Front Light,DE,39.5409,-75.5666,1902,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+baker-shoal-range-rear-light,Baker Shoal Range Rear Light,DE,39.512,-75.5699,1904,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+cape-henlopen-beacon,Cape Henlopen Beacon,DE,38.7903,-75.0806,1825,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+cape-henlopen-light,Cape Henlopen Light,DE,38.778,-75.084,1769,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+cherry-island-range-rear-light,Cherry Island Range Rear Light,DE,39.762,-75.49,1880,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+delaware-breakwater-east-end-light,Delaware Breakwater East End Light,DE,38.7972,-75.1003,1885,inactive,caisson,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+delaware-breakwater-range-front-light,Delaware Breakwater Range Front Light,DE,38.7992,-75.1081,1838,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+delaware-breakwater-range-rear-light,Delaware Breakwater Range Rear Light,DE,38.7897,-75.1694,1881,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+fenwick-island-light,Fenwick Island Light,DE,38.4514,-75.055,1859,active,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+fourteen-foot-bank-light,Fourteen Foot Bank Light,DE,39.0482,-75.1822,1887,active,caisson,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+harbor-of-refuge-light,Harbor of Refuge Light,DE,38.8145,-75.0924,1908,active,caisson,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+liston-range-front-light,Liston Range Front Light,DE,39.4825,-75.5917,1906,inactive,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+liston-range-rear-light,Liston Range Rear Light,DE,39.5238,-75.6397,1906,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+mahon-river-light,Mahon River Light,DE,39.185,-75.4008,1831,destroyed,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+mispillion-light,Mispillion Light,DE,38.9475,-75.3156,1831,inactive,tower,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+new-castle-range-front-light,New Castle Range Front Light,DE,39.6424,-75.5954,1876,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+new-castle-range-rear-light,New Castle Range Rear Light,DE,39.6482,-75.599,1876,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
+reedy-island-range-rear-light,Reedy Island Range Rear Light,DE,39.4065,-75.5902,1910,active,range,,https://en.wikipedia.org/wiki/List_of_lighthouses_in_Delaware
