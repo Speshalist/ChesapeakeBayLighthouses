@@ -62,6 +62,32 @@
           Destroyed lighthouses are shown by default with distinct styling.
         </p>
 
+        <section class="timeline" aria-labelledby="timeline-heading">
+          <h3 id="timeline-heading">Build Timeline</h3>
+          <div class="timeline-controls">
+            <button type="button" id="timeline-play" class="timeline-button">
+              Play Timelapse
+            </button>
+            <button type="button" id="timeline-reset" class="timeline-button timeline-button-secondary">
+              Show All
+            </button>
+          </div>
+          <label for="timeline-year" class="timeline-label">Show lighthouses built by year:</label>
+          <input
+            id="timeline-year"
+            type="range"
+            min="1800"
+            max="2000"
+            step="1"
+            value="2000"
+            aria-describedby="timeline-current-year timeline-summary"
+          />
+          <div id="timeline-event-track" class="timeline-event-track" aria-hidden="true"></div>
+          <p id="timeline-current-year" class="timeline-current-year">Year: --</p>
+          <p id="timeline-event" class="timeline-event">Historical context: --</p>
+          <p id="timeline-summary" class="note">Loading timeline data...</p>
+        </section>
+
         <section id="legend" class="legend" aria-live="polite"></section>
       </section>
 

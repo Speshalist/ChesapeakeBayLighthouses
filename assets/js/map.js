@@ -24,6 +24,23 @@ osm.addTo(map);
 
 let currentMode = "status";
 let geoLayer = null;
+let allGeojson = null;
+let minBuiltYear = 1800;
+let maxBuiltYear = 2000;
+let timelineYear = 2000;
+let totalWithYear = 0;
+let mapFitted = false;
+let playTimer = null;
+
+const TIMELAPSE_INTERVAL_MS = 220;
+const HISTORICAL_EVENTS = [
+  { year: 1776, label: "US Independence" },
+  { year: 1812, label: "War of 1812" },
+  { year: 1861, label: "Civil War begins" },
+  { year: 1903, label: "Wright brothers fly" },
+  { year: 1941, label: "US enters WWII" },
+  { year: 1964, label: "Bay Bridge-Tunnel opens" },
+];
 
 function legendItemsForMode(mode) {
   if (mode === "type") {
@@ -174,22 +191,203 @@ function popupHtml(p) {
   `;
 }
 
-async function loadGeojson() {
-  const res = await fetch(`${base}lighthouses.geojson`);
-  if (!res.ok) throw new Error(`Failed to load GeoJSON: ${res.status}`);
-  const gj = await res.json();
+function timelineElements() {
+  return {
+    slider: document.getElementById("timeline-year"),
+    yearLabel: document.getElementById("timeline-current-year"),
+    summary: document.getElementById("timeline-summary"),
+    eventLabel: document.getElementById("timeline-event"),
+    eventTrack: document.getElementById("timeline-event-track"),
+    playButton: document.getElementById("timeline-play"),
+    resetButton: document.getElementById("timeline-reset"),
+  };
+}
+
+function clampTimelineYear(year) {
+  if (!Number.isFinite(year)) return maxBuiltYear;
+  return Math.max(minBuiltYear, Math.min(maxBuiltYear, Math.round(year)));
+}
+
+function yearFromFeature(feature) {
+  return Number(feature?.properties?.year_built);
+}
+
+function featureVisibleForYear(feature, year) {
+  const builtYear = yearFromFeature(feature);
+  return Number.isFinite(builtYear) && builtYear <= year;
+}
+
+function nearestHistoricalEvent(year) {
+  const candidates = HISTORICAL_EVENTS.filter((event) => event.year <= year);
+  if (!candidates.length) return null;
+  return candidates[candidates.length - 1];
+}
+
+function updateHistoricalEventMarkers() {
+  const { eventTrack } = timelineElements();
+  if (!eventTrack) return;
+
+  eventTrack.innerHTML = "";
+  const range = maxBuiltYear - minBuiltYear;
+  if (range <= 0) return;
+
+  for (const event of HISTORICAL_EVENTS) {
+    if (event.year < minBuiltYear || event.year > maxBuiltYear) continue;
+
+    const leftPct = ((event.year - minBuiltYear) / range) * 100;
+    const marker = document.createElement("div");
+    marker.className = "timeline-event-marker";
+    marker.style.left = `${leftPct}%`;
+    marker.title = `${event.year}: ${event.label}`;
+    marker.innerHTML = `<span>${event.year}</span>`;
+    eventTrack.appendChild(marker);
+  }
+}
+
+function updateTimelineText() {
+  const { yearLabel, summary, eventLabel } = timelineElements();
+  if (yearLabel) yearLabel.textContent = `Year: ${timelineYear}`;
+
+  if (summary && allGeojson?.features) {
+    const shown = allGeojson.features.filter((feature) =>
+      featureVisibleForYear(feature, timelineYear)
+    ).length;
+    summary.textContent = `Showing ${shown} of ${totalWithYear} lighthouses with known build years.`;
+  }
+
+  if (eventLabel) {
+    const event = nearestHistoricalEvent(timelineYear);
+    eventLabel.textContent = event
+      ? `Historical context: ${event.year} - ${event.label}`
+      : "Historical context: --";
+  }
+}
+
+function stopTimelapse() {
+  if (playTimer) {
+    clearInterval(playTimer);
+    playTimer = null;
+  }
+
+  const { playButton } = timelineElements();
+  if (!playButton) return;
+  playButton.textContent = "Play Timelapse";
+  playButton.setAttribute("aria-pressed", "false");
+}
+
+function renderGeoLayer() {
+  if (!allGeojson) return;
 
   if (geoLayer) geoLayer.remove();
 
-  geoLayer = L.geoJSON(gj, {
-    pointToLayer: markerForFeature,
-    onEachFeature: (feature, layer) => {
-      layer.bindPopup(popupHtml(feature.properties || {}));
-    },
-  }).addTo(map);
+  const filteredFeatures = allGeojson.features.filter((feature) =>
+    featureVisibleForYear(feature, timelineYear)
+  );
 
-  const bounds = geoLayer.getBounds();
-  if (bounds.isValid()) map.fitBounds(bounds.pad(0.12));
+  geoLayer = L.geoJSON(
+    { type: "FeatureCollection", features: filteredFeatures },
+    {
+      pointToLayer: markerForFeature,
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(popupHtml(feature.properties || {}));
+      },
+    }
+  ).addTo(map);
+
+  if (!mapFitted && geoLayer.getLayers().length) {
+    const bounds = geoLayer.getBounds();
+    if (bounds.isValid()) {
+      map.fitBounds(bounds.pad(0.12));
+      mapFitted = true;
+    }
+  }
+}
+
+function setTimelineYear(year) {
+  timelineYear = clampTimelineYear(year);
+
+  const { slider } = timelineElements();
+  if (slider) slider.value = String(timelineYear);
+
+  updateTimelineText();
+  renderGeoLayer();
+}
+
+function initializeTimeline() {
+  if (!allGeojson?.features?.length) return;
+
+  const builtYears = allGeojson.features
+    .map((feature) => yearFromFeature(feature))
+    .filter((value) => Number.isFinite(value));
+
+  if (!builtYears.length) return;
+
+  minBuiltYear = Math.min(...builtYears);
+  maxBuiltYear = Math.max(...builtYears);
+  totalWithYear = builtYears.length;
+  timelineYear = maxBuiltYear;
+
+  const { slider } = timelineElements();
+  if (slider) {
+    slider.min = String(minBuiltYear);
+    slider.max = String(maxBuiltYear);
+    slider.step = "1";
+    slider.value = String(timelineYear);
+  }
+
+  updateHistoricalEventMarkers();
+  updateTimelineText();
+}
+
+function toggleTimelapse() {
+  const { playButton } = timelineElements();
+  if (!playButton) return;
+
+  if (playTimer) {
+    stopTimelapse();
+    return;
+  }
+
+  if (timelineYear >= maxBuiltYear) setTimelineYear(minBuiltYear);
+
+  playButton.textContent = "Pause Timelapse";
+  playButton.setAttribute("aria-pressed", "true");
+
+  playTimer = setInterval(() => {
+    if (timelineYear >= maxBuiltYear) {
+      stopTimelapse();
+      return;
+    }
+
+    setTimelineYear(timelineYear + 1);
+  }, TIMELAPSE_INTERVAL_MS);
+}
+
+function bindTimelineControls() {
+  const { slider, playButton, resetButton } = timelineElements();
+
+  slider?.addEventListener("input", (e) => {
+    stopTimelapse();
+    setTimelineYear(Number(e.target.value));
+  });
+
+  playButton?.addEventListener("click", () => {
+    toggleTimelapse();
+  });
+
+  resetButton?.addEventListener("click", () => {
+    stopTimelapse();
+    setTimelineYear(maxBuiltYear);
+  });
+}
+
+async function loadGeojson() {
+  const res = await fetch(`${base}lighthouses.geojson`);
+  if (!res.ok) throw new Error(`Failed to load GeoJSON: ${res.status}`);
+  allGeojson = await res.json();
+
+  initializeTimeline();
+  renderGeoLayer();
 }
 
 function applyBasemap(v) {
@@ -205,7 +403,7 @@ function applyBasemap(v) {
 function applySymbology(v) {
   currentMode = v;
   renderLegend();
-  return loadGeojson();
+  renderGeoLayer();
 }
 
 // Backward compatibility: keep working if selects are rendered.
@@ -214,7 +412,7 @@ document.getElementById("basemap")?.addEventListener("change", (e) => {
 });
 
 document.getElementById("symbology")?.addEventListener("change", async (e) => {
-  await applySymbology(e.target.value);
+  applySymbology(e.target.value);
 });
 
 for (const input of document.querySelectorAll('input[name="basemap"]')) {
@@ -224,11 +422,12 @@ for (const input of document.querySelectorAll('input[name="basemap"]')) {
 }
 
 for (const input of document.querySelectorAll('input[name="symbology"]')) {
-  input.addEventListener("change", async (e) => {
-    if (e.target.checked) await applySymbology(e.target.value);
+  input.addEventListener("change", (e) => {
+    if (e.target.checked) applySymbology(e.target.value);
   });
 }
 
+bindTimelineControls();
 renderLegend();
 loadGeojson().catch((err) => {
   console.error(err);

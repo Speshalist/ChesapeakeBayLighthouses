@@ -180,6 +180,97 @@ body {
   padding-top: 10px;
 }
 
+.timeline {
+  margin-top: 12px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+.timeline h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.timeline-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.timeline-button {
+  border: 1px solid #8cb7e8;
+  border-radius: 999px;
+  background: #e8f2ff;
+  color: #0a4a86;
+  font: inherit;
+  font-weight: 600;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.timeline-button[aria-pressed="true"] {
+  background: #0a4a86;
+  border-color: #0a4a86;
+  color: #fff;
+}
+
+.timeline-button-secondary {
+  background: #fff;
+  border-color: #c8d0d8;
+  color: #333;
+  font-weight: 500;
+}
+
+.timeline-label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+#timeline-year {
+  width: 100%;
+}
+
+.timeline-event-track {
+  position: relative;
+  height: 24px;
+  margin: 6px 0;
+  border-bottom: 1px dashed #c8d0d8;
+}
+
+.timeline-event-marker {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.timeline-event-marker::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 10px;
+  margin: 0 auto 2px;
+  background: #57606a;
+}
+
+.timeline-event-marker span {
+  font-size: 0.65rem;
+  color: #57606a;
+  white-space: nowrap;
+}
+
+.timeline-current-year {
+  margin: 4px 0;
+  font-weight: 600;
+}
+
+.timeline-event {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
 .legend-title {
   font-weight: 600;
   margin-bottom: 8px;
