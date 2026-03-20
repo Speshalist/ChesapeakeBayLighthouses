@@ -21,6 +21,72 @@ osm.addTo(map);
 let currentMode = "status";
 let geoLayer = null;
 
+function legendItemsForMode(mode) {
+  if (mode === "type") {
+    return {
+      title: "Legend: Type",
+      items: [
+        ["Screw-pile", colorByType("screw-pile")],
+        ["Caisson", colorByType("caisson")],
+        ["Range", colorByType("range")],
+        ["Lightship", colorByType("lightship")],
+        ["Tower", colorByType("tower")],
+        ["Other / Unknown", colorByType("unknown")],
+      ],
+    };
+  }
+
+  if (mode === "year_built") {
+    return {
+      title: "Legend: Year Built",
+      items: [
+        ["Before 1850", colorByYear(1849)],
+        ["1850-1899", colorByYear(1899)],
+        ["1900-1949", colorByYear(1949)],
+        ["1950 and later", colorByYear(1950)],
+        ["Unknown year", colorByYear(NaN)],
+      ],
+    };
+  }
+
+  return {
+    title: "Legend: Status",
+    items: [
+      ["Active", colorByStatus("active")],
+      ["Inactive", colorByStatus("inactive")],
+      ["Destroyed", colorByStatus("destroyed")],
+      ["Unknown", colorByStatus("unknown")],
+    ],
+  };
+}
+
+function renderLegend() {
+  const target = document.getElementById("legend");
+  if (!target) return;
+
+  const { title, items } = legendItemsForMode(currentMode);
+  const rows = items
+    .map(([label, color]) => {
+      const isDestroyed = currentMode === "status" && label === "Destroyed";
+      const swatchClass = isDestroyed
+        ? "legend-swatch legend-swatch-ring"
+        : "legend-swatch";
+      const style = isDestroyed
+        ? `style="border-color:${color}"`
+        : `style="background:${color}"`;
+
+      return `<div class="legend-row"><span class="${swatchClass}" ${style}></span><span class="legend-label">${label}</span></div>`;
+    })
+    .join("");
+
+  const destroyedNote =
+    currentMode === "status"
+      ? "<div class=\"note\">Destroyed is shown with a ring marker.</div>"
+      : "";
+
+  target.innerHTML = `<div class="legend-title">${title}</div>${rows}${destroyedNote}`;
+}
+
 function colorByStatus(status) {
   switch ((status || "unknown").toLowerCase()) {
     case "active":
@@ -122,9 +188,11 @@ document.getElementById("basemap")?.addEventListener("change", (e) => {
 
 document.getElementById("symbology")?.addEventListener("change", async (e) => {
   currentMode = e.target.value;
+  renderLegend();
   await loadGeojson();
 });
 
+renderLegend();
 loadGeojson().catch((err) => {
   console.error(err);
   alert("Failed to load lighthouse data. See console for details.");
